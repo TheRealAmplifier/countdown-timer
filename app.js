@@ -8,7 +8,7 @@
 	let endDate = new Date('Jun 24, 2018 00:00:00').getTime();
 
 	// interval (each second) and update screen;
-	const calculateRemainingTime = setInterval( () => {
+	setInterval( () => {
 		let currentTime = new Date().getTime();
 		let remaining = endDate - currentTime;
 
