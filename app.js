@@ -9,6 +9,11 @@
 
 	// interval (each second) and update screen;
 	setInterval( () => {
+		calculateTime();
+	}, 1000 );
+
+	// calculate function
+	const calculateTime = () => {
 		let currentTime = new Date().getTime();
 		let remaining = endDate - currentTime;
 
@@ -21,4 +26,4 @@
 		hourContainer.innerText = Math.floor( ( remaining % day ) / hour );
 		minuteContainer.innerText = Math.floor( ( remaining % hour ) / minute );
 		secondContainer.innerText = Math.floor( ( remaining % minute ) / second );
-	}, 1000 );
+	}
